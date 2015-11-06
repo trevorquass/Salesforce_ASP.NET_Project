@@ -1,0 +1,49 @@
+﻿@using WebApplication9.Models;
+@model Tuple<List<AccountViewModel>, List<AccountViewModel1>>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<head>
+    <title>Geocoding service</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 100px;
+            padding: 0;
+        }
+
+        #map {
+            height: 500px;
+        }
+
+        #floating-panel {
+            position: inherit;
+            top: 10px;
+            left: 25%;
+            z-index: 5;
+            background-color: #fff;
+            padding: 5px;
+            border: 1px solid #999;
+            text-align: center;
+            font-family: 'Roboto','sans-serif';
+            line-height: 30px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Accounts</h2>
+    @using (Html.BeginForm())
+    {
+        <p>
+            @*Title: @Html.TextBox("SearchString") <br />*@
+            <input type="submit" name="SearchString" value="Print" />
+        </p>
+    }
+
+</body>
